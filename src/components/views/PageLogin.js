@@ -18,7 +18,7 @@ function PageLogin() {
         setError(false);
         e.preventDefault();
         console.log(username, password);
-        const data = axios.post("https://anpr.pushpak.cloud:5001/auth/login", {
+        const data = axios.post("http://anpr.pushpak.cloud:5001/auth/login", {
           email: username,
           password: password
           }, {
