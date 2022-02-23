@@ -2,7 +2,6 @@ import React,{ useEffect, useState } from 'react'
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
-import { addLocale } from 'primereact/api';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import axios from 'axios';
@@ -125,7 +124,6 @@ function VechicleLog() {
         handleSearch();
     }
     const handleSearch = (e) => {
-        console.log(value1)
         if(value1 ===""){
             setFilteredData(listData);
         }
@@ -144,11 +142,9 @@ function VechicleLog() {
                 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
             },
         }).then(res=>{
-            console.log(res);
             setListData(res.data);
         }
         ).catch(err=>{
-            console.log(err);
             setListData([]);
         })
     }, []);

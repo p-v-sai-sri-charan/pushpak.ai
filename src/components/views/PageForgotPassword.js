@@ -5,7 +5,6 @@ import pushpaklogo from "../../assests/images/pushpaklogo.svg";
 function PageForgotPassword() {
   useLayoutEffect(() => {
     if(getUserInfo()){
-         console.log("isValid",getUserInfo())
          window.location.href = "/vechicle-log";
     }
    }, [])

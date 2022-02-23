@@ -101,12 +101,9 @@ function VechicleLogDetail() {
     const [vechicleDetails, setVechicleDetails] = React.useState([]);
     useEffect(() => {
      const items =  data.filter(item => item.id === parseInt(id));
-      console.log(items)
         setVechicleDetails(items);
-    }, [])
-    console.log(vechicleDetails)
+    }, [data,id]);
     const vehicleImage = (rowData) => {
-        console.log(typeof(rowData.vehicleImage))
         return (
             <React.Fragment>
                 <Image src={rowData?.vehicleImage} alt="vehicleImage" style={{ width: '100px', height: '100px' }} />

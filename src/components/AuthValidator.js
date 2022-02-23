@@ -5,7 +5,6 @@ import { getUserInfo } from '../services/Auth.service';
 function AuthValidator(props) {
     const isValid=()=>{
         if(getUserInfo()){
-            console.log("isValid",getUserInfo())
             return true;
         }else{
             return false;

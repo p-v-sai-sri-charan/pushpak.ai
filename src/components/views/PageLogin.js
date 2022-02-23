@@ -6,7 +6,6 @@ import { getUserInfo } from "../../services/Auth.service";
 function PageLogin() {
     useLayoutEffect(() => {
      if(getUserInfo()){
-          console.log("isValid",getUserInfo())
           window.location.href = "/vechicle-log";
      }
     }, [])
@@ -17,7 +16,6 @@ function PageLogin() {
     const handleSubmit = async (e) => {
         setError(false);
         e.preventDefault();
-        console.log(username, password);
         const data = axios.post("http://anpr.pushpak.cloud:5001/auth/login", {
           email: username,
           password: password
@@ -28,7 +26,6 @@ function PageLogin() {
                   "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
               },
           }).then(res => {
-            console.log(res);
           setError(false);
             localStorage.setItem("userInfo", JSON.stringify(res.data.data));
             localStorage.setItem("token", res.data.token);

@@ -26,8 +26,6 @@ export const linkNameVechicleLogDetail = "Vechicle Log Detail";
 
 
 //views
-const login = React.lazy(() => import("./components/views/PageLogin"));
-const forgotPassword = React.lazy(() => import("./components/views/PageForgotPassword"));
 const changePassword = React.lazy(() => import("./components/views/PageChangePassword"));
 const dashboard = React.lazy(() => import("./components/views/dashboard"));
 const videoWall = React.lazy(() => import("./components/views/videoWall"));

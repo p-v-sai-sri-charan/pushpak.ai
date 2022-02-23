@@ -1,7 +1,6 @@
 import React, { Suspense, useState } from "react";
-import { Redirect, Route, Switch, useParams } from "react-router-dom";
+import { Redirect, Route, Switch} from "react-router-dom";
 import AuthValidator from "../components/AuthValidator";
-import PanelMenu from "../components/PanelMenu";
 import routes from "../routes";
 import DeafultHeader from "./DefaultHeader";
 import pushpaklogo from "../assests/images/pushpaklogo.svg";
@@ -10,8 +9,6 @@ function DefaultLayout(props) {
   const [openNav, setOpenNav] = useState(false);
   const [openTopMenu, setOpenTopMenu] = useState(false);
   const parameter = window.location.pathname;
-  console.log("parameter", parameter);
-
   const onToggleSideMenu = () => {
     const openNavs = openNav;
     setOpenNav(!openNav);
